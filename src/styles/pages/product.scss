@@ -1,0 +1,24 @@
+.product-page {
+  .product-window {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+
+    .product-info {
+      text-decoration: none;
+      width: 50%;
+
+      h3 {
+        color: $alice;
+        font-family: "Oswald", sans-serif;
+        font-size: 80px;
+      }
+
+      p {
+        color: $alice;
+        font-family: "Oswald", sans-serif;
+        font-size: 40px;
+      }
+    }
+  }
+}

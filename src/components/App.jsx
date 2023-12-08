@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import Product from "./pages/Product";
 import About from "./pages/About";
 import Footer from "./nav/Footer";
 import NavBar from "./nav/NavBar";
@@ -19,7 +20,8 @@ function App() {
         </div>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/products" component={Products} />
+          <Route exact path="/products" component={Products} />
+          <Route path="/products/:id" component={Product} />
           <Route path="/cart" component={Cart} />
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />

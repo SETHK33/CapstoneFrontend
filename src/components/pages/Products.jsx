@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import ProductItem from "../ProductItem";
+
 export default function Products() {
   const [products, setProducts] = useState([]);
 
@@ -15,16 +17,7 @@ export default function Products() {
       <h1>Products</h1>
       <div className="products-grid">
         {products.map((product, index) => (
-          <div key={index} className="product-card">
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>
-              {product.description.length > 100
-                ? `${product.description.substring(0, 100)}...`
-                : product.description}
-            </p>
-            <p>${product.price.toFixed(2)}</p>
-          </div>
+          <ProductItem product={product} key={index} />
         ))}
       </div>
     </div>
