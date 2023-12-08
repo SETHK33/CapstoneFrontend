@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 
 import ProductItem from "../ProductItem";
+import AlphaSort from "../AlphaSort";
+import SearchFilter from "../SearchFilter";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
+  const [filterProducts, setFilterProducts] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -14,11 +17,20 @@ export default function Products() {
 
   return (
     <div className="products-page page-container">
-      <h1>Products</h1>
+      <div className="products-header-wrapper">
+        <h1>Products</h1>
+        <AlphaSort products={products} setProducts={setProducts} />
+        <SearchFilter
+          products={products}
+          setFilterProducts={setFilterProducts}
+        />
+      </div>
       <div className="products-grid">
-        {products.map((product, index) => (
-          <ProductItem product={product} key={index} />
-        ))}
+        {filterProducts
+          // .filter((product) => product.title.startsWith("A"))
+          .map((product, index) => (
+            <ProductItem product={product} key={index} />
+          ))}
       </div>
     </div>
   );
