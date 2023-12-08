@@ -19,11 +19,16 @@ body {
   margin-bottom: 90px;
 }
 
+a {
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
 .navbar-links a {
   text-decoration: none;
   color: $alice;
   text-transform: uppercase;
-  cursor: pointer;
+  cursor: crosshair;
   transition: text-shadow 0.3s ease-out;
 
   &:hover {

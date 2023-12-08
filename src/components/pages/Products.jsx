@@ -26,11 +26,9 @@ export default function Products() {
         />
       </div>
       <div className="products-grid">
-        {filterProducts
-          // .filter((product) => product.title.startsWith("A"))
-          .map((product, index) => (
-            <ProductItem product={product} key={index} />
-          ))}
+        {filterProducts.map((product, index) => (
+          <ProductItem product={product} key={index} />
+        ))}
       </div>
     </div>
   );

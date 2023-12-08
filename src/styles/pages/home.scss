@@ -3,10 +3,9 @@
     font-family: "Oswald", sans-serif;
     font-size: 160px;
   }
-  .box {
+  .slide-container {
     .slide {
-      height: 400px;
-      width: 20%;
+      transform: scale(0.5);
     }
   }
 }

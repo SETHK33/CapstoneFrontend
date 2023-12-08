@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { CartContext } from "../context/CartContext";
+
 export default function ProductItem(props) {
+  const cartContext = useContext(CartContext);
   const { product, identity } = props;
+
   return (
     <Link to={`/products/${product.id}`}>
       <div className={`product-card ${identity}`}>
@@ -16,6 +21,16 @@ export default function ProductItem(props) {
               : product.description}
           </p>
           <p>${product.price?.toFixed(2)}</p>
+        </div>
+        <div className="cart-btn">
+          <button
+            onClick={() =>
+              cartContext.setCart((prevState) => [...prevState, product])
+            }
+          >
+            + Add Cart
+          </button>
+          {console.log(cartContext)}
         </div>
       </div>
     </Link>

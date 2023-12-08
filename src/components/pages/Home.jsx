@@ -21,11 +21,17 @@ export default function Home() {
   return (
     <div className="home-page page-container">
       <h1>2950 WORLDWIDE</h1>
-      <div className="box">
+      <div className="slide-container">
         <Carousel useKeyboardArrows={true}>
           {images.map((URL, index) => (
             <div className="slide">
-              <img alt="sample" src={URL} key={index} />
+              <img
+                alt="sample"
+                src={URL}
+                key={index}
+                // height="400px"
+                // width="400px"
+              />
             </div>
           ))}
         </Carousel>
