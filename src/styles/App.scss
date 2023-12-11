@@ -2,9 +2,10 @@
 @import "./common/mixins.scss";
 @import "./common/common.scss";
 
-@import "./nav/navbar.scss";
+@import "./pages/products.scss";
+@import "./pages/contact.scss";
+@import "./pages/product.scss";
+@import "./pages/about.scss";
 @import "./nav/footer.scss";
 @import "./pages/home.scss";
-@import "./pages/products.scss";
-@import "./pages/product.scss";
-@import "./pages/contact.scss";
+@import "./nav/navbar.scss";

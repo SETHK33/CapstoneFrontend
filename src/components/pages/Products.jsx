@@ -19,11 +19,13 @@ export default function Products() {
     <div className="products-page page-container">
       <div className="products-header-wrapper">
         <h1>Products</h1>
-        <AlphaSort products={products} setProducts={setProducts} />
-        <SearchFilter
-          products={products}
-          setFilterProducts={setFilterProducts}
-        />
+        <div className="sort-features">
+          <AlphaSort products={products} setProducts={setProducts} />
+          <SearchFilter
+            products={products}
+            setFilterProducts={setFilterProducts}
+          />
+        </div>
       </div>
       <div className="products-grid">
         {filterProducts.map((product, index) => (
