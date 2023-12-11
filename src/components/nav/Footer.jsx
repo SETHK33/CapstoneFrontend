@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="footer-wrapper">
         <div className="footer-links">
           <p>2950 AVE PROVO, UT</p>
-          <p>(801)-898-8989</p>
+          <p>(801)-888-2950</p>
           <p>&copy;2950 WORLDWIDE</p>
         </div>
       </div>
