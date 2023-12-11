@@ -24,6 +24,10 @@ a {
   cursor: zoom-in;
 }
 
+button {
+  background-color: $cinereous;
+}
+
 .navbar-links a {
   text-decoration: none;
   color: $alice;
@@ -45,8 +49,8 @@ h1 {
   transition: text-shadow 0.3s ease-out;
 
   &:hover {
-    text-shadow: 0.06em 0.06em $cambridge, 0.12em 0.12em $celestial,
-      0.18em 0.18em $alice, 0.24em 0.24em $cerulean, 0.3em 0.3em #3462fe;
+    text-shadow: 0.06em 0.06em $dun, 0.12em 0.12em $rose-quartz,
+      0.18em 0.18em $cinereous, 0.24em 0.24em $sepia, 0.3em 0.3em $mortuum;
     transition: text-shadow 0.3s ease-in;
   }
 }
