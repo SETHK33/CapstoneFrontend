@@ -1,0 +1,8 @@
+.cart-page {
+  @include flex-center-column;
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 80px;
+  }
+}

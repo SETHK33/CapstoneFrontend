@@ -21,16 +21,16 @@ export default function ProductItem(props) {
               : product.description}
           </p>
           <p>${product.price?.toFixed(2)}</p>
-        </div>
-        <div className="cart-btn">
-          <button
-            onClick={() =>
-              cartContext.setCart((prevState) => [...prevState, product])
-            }
-          >
-            + Add Cart
-          </button>
-          {console.log(cartContext)}
+          <div className="cart-btn">
+            <button
+              onClick={() =>
+                cartContext.setCart((prevState) => [...prevState, product])
+              }
+            >
+              + Add Cart
+            </button>
+            {console.log(cartContext)}
+          </div>
         </div>
       </div>
     </Link>
