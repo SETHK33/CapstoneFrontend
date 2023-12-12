@@ -22,11 +22,11 @@ export default function About() {
           </div>
 
           <div className="about-image">
-            <img src={aboutPhoto1} alt="" />
+            <img src={aboutPhoto1} alt="about" />
           </div>
 
           <div className="about-image">
-            <img src={aboutPhoto2} alt="" />
+            <img src={aboutPhoto2} alt="about" />
           </div>
 
           <div className="about-text">
@@ -54,7 +54,7 @@ export default function About() {
           </div>
 
           <div className="about-image">
-            <img src={aboutPhoto3} alt="" />
+            <img src={aboutPhoto3} alt="about" />
           </div>
         </div>
       </div>
