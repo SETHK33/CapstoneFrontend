@@ -6,6 +6,18 @@ import { CartContext } from "../context/CartContext";
 export default function ProductItem(props) {
   const cartContext = useContext(CartContext);
   const { product, identity } = props;
+  const [quantity, setQuantity] = useState(1);
+
+
+  const addQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const subQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   return (
     <div className={`product-card ${identity}`}>
@@ -31,6 +43,22 @@ export default function ProductItem(props) {
             + Add Cart
           </button>
           {console.log(cartContext)}
+          <div className="cart-quantity">
+        <button onClick={addQuantity}>+</button>
+        <span>{quantity}</span>
+        <button onClick={subQuantity}>-</button>
+      </div>
+      <div className="remove-btn">
+        <button
+          onClick={() =>
+            cartContext.setCart((prevState) =>
+              prevState.filter((product) => product.id !== )
+            )
+          }
+        >
+          - Remove
+        </button>
+      </div>
         </div>
       </div>
     </div>
