@@ -31,19 +31,25 @@ export default function About() {
 
           <div className="about-text">
             <p>
-              <b>Struggles</b> Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Ex ad sapiente vero iure laboriosam repellat
-              dicta. Nihil possimus earum ad? Eos tenetur cumque explicabo rem
-              dolorum porro quis magnam corrupti.
+              <b>Challenges</b> Understanding useContext in React initially
+              posed a challenge; how to use this hook to manage global state and
+              pass data across components without prop drilling seemed abstract.
+              By utilizing useContext in this project, I learned that useContext
+              provides a way to access values (like a state or function) within
+              components, removing the need to pass props down manually. Using
+              the useContext hook, I could access and update shared data with
+              ease.
             </p>
           </div>
 
           <div className="about-text">
             <p>
-              <b>Favorite Languages</b> Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Iusto quaerat ipsum sit reiciendis perspiciatis
-              aperiam assumenda nobis animi est, explicabo consectetur eveniet
-              fugiat earum ducimus odit repellat quibusdam mollitia impedit!
+              <b>Favorite Languages</b> I enjoyed learning React. I like the
+              component-based approach of the language. It helps me visualize a
+              project by its individual parts and see how it will render on the
+              DOM. I also enjoyed experimenting with SCSS and CSS stylings and
+              the various ways in which to make pages and projects cleaner and
+              fun.
             </p>
           </div>
 

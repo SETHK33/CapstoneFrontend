@@ -29,7 +29,7 @@ export default function Products() {
       </div>
       <div className="products-grid">
         {filterProducts.map((product, index) => (
-          <ProductItem product={product} key={index} />
+          <ProductItem product={product} key={index} identity={false} />
         ))}
       </div>
     </div>

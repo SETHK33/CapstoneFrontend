@@ -4,6 +4,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [review, setReview] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
 
   const handleSubmit = (e) => {
@@ -19,6 +23,10 @@ export default function Contact() {
 
     setFormSubmit(true);
 
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setReview("");
     setFormSubmit(false);
     toast.success("Submitted Successfully");
   };
@@ -35,6 +43,8 @@ export default function Contact() {
               id="first-name"
               placeholder="First Name"
               title="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
           <div className="form-input">
@@ -43,10 +53,19 @@ export default function Contact() {
               id="last-name"
               placeholder="Last Name"
               title="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
           <div className="form-input">
-            <input type="email" id="email" placeholder="Email" title="Email" />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              title="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="form-input">
             <textarea
@@ -56,6 +75,8 @@ export default function Contact() {
               rows="10"
               placeholder="Questions / Comments"
               title="Questions / Comments"
+              value={review}
+              onChange={(e) => setReview(e.target.value)}
             ></textarea>
           </div>
           <div className="submit-btn">
