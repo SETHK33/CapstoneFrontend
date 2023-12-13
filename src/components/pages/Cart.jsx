@@ -30,6 +30,7 @@ export default function Cart() {
               identity={false}
               setTotal={setTotal}
               key={cartItem.id}
+              productDescription={false}
             />
           );
         })}

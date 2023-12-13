@@ -34,11 +34,13 @@ export default function ProductItem(props) {
       </div>
       <div className="product-info">
         <h3>{product.title}</h3>
-        <p>
-          {product.description?.length > 100 && props.identity === false
-            ? `${product.description.substring(0, 100)}...`
-            : product.description}
-        </p>
+        {props.productDescription ? (
+          <p>
+            {product.description?.length > 100 && props.identity === false
+              ? `${product.description.substring(0, 100)}...`
+              : product.description}
+          </p>
+        ) : null}
         <p>${product.price?.toFixed(2)}</p>
         <div className="cart-btn">
           {props.quantityBtns ? (

@@ -17,6 +17,7 @@ export default function Product(props) {
         product={product}
         identity="product-window"
         quantityBtns={true}
+        productDescription={true}
       />
     </div>
   );

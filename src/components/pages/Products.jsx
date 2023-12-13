@@ -34,6 +34,7 @@ export default function Products() {
             key={index}
             identity={false}
             quantityBtns={true}
+            productDescription={true}
           />
         ))}
       </div>
