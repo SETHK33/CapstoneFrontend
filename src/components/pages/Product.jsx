@@ -13,7 +13,11 @@ export default function Product(props) {
 
   return (
     <div className="product-page page-container">
-      <ProductItem product={product} identity="product-window" />
+      <ProductItem
+        product={product}
+        identity="product-window"
+        quantityBtns={true}
+      />
     </div>
   );
 }

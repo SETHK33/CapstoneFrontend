@@ -1,21 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { CartContext } from "../context/CartContext";
 
 export default function ProductItem(props) {
   const cartContext = useContext(CartContext);
-  const { product, identity } = props;
+  const { product, identity, setTotal } = props;
   const [quantity, setQuantity] = useState(1);
-
 
   const addQuantity = () => {
     setQuantity(quantity + 1);
+    setTotal((prevState) => parseFloat(prevState) + product.price);
   };
 
   const subQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
+      setTotal((prevState) => parseFloat(prevState) - product.price);
     }
   };
 
@@ -23,7 +24,12 @@ export default function ProductItem(props) {
     <div className={`product-card ${identity}`}>
       <div className="card-image">
         <Link to={`/products/${product.id}`}>
-          <img src={product.image} alt={product.title} />
+          <img
+            src={product.image}
+            alt={product.title}
+            height="400px"
+            width="auto"
+          />
         </Link>
       </div>
       <div className="product-info">
@@ -35,30 +41,37 @@ export default function ProductItem(props) {
         </p>
         <p>${product.price?.toFixed(2)}</p>
         <div className="cart-btn">
-          <button
-            onClick={() =>
-              cartContext.setCart((prevState) => [...prevState, product])
-            }
-          >
-            + Add Cart
-          </button>
-          {console.log(cartContext)}
-          <div className="cart-quantity">
-        <button onClick={addQuantity}>+</button>
-        <span>{quantity}</span>
-        <button onClick={subQuantity}>-</button>
-      </div>
-      <div className="remove-btn">
-        <button
-          onClick={() =>
-            cartContext.setCart((prevState) =>
-              prevState.filter((product) => product.id !== )
-            )
-          }
-        >
-          - Remove
-        </button>
-      </div>
+          {props.quantityBtns ? (
+            <button
+              onClick={() =>
+                cartContext.setCart((prevState) => [...prevState, product])
+              }
+            >
+              + Add Cart
+            </button>
+          ) : (
+            <>
+              <div className="cart-quantity">
+                <button onClick={addQuantity}>+</button>
+                <span>{quantity}</span>
+                <button onClick={subQuantity}>-</button>
+              </div>
+              <div className="remove-btn">
+                {console.log(props)}
+                <button
+                  onClick={() =>
+                    cartContext.setCart((prevState) =>
+                      prevState.filter(
+                        (prevStateItem) => prevStateItem.id !== props.product.id
+                      )
+                    )
+                  }
+                >
+                  - Remove
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
