@@ -6,20 +6,20 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: $alice;
 
     .product-info {
       text-decoration: none;
       width: 50%;
 
       h3 {
-        color: $alice;
+        color: $mortuum;
         font-family: "Oswald", sans-serif;
         font-size: 80px;
       }
 
       p {
-        color: $alice;
+        color: black;
         font-family: "Oswald", sans-serif;
         font-size: 40px;
       }

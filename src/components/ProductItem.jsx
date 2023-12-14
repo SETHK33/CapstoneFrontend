@@ -28,7 +28,7 @@ export default function ProductItem(props) {
             src={product.image}
             alt={product.title}
             height="400px"
-            width="auto"
+            width="400px"
           />
         </Link>
       </div>
@@ -55,8 +55,8 @@ export default function ProductItem(props) {
             <>
               <div className="cart-quantity">
                 <button onClick={addQuantity}>+</button>
-                <span>{quantity}</span>
                 <button onClick={subQuantity}>-</button>
+                <span>{quantity}</span>
               </div>
               <div className="remove-btn">
                 {console.log(props)}
