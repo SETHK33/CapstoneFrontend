@@ -31,14 +31,14 @@ export default function About() {
 
           <div className="about-text">
             <p>
-              <b>Challenges</b> Understanding useContext in React initially
-              posed a challenge; how to use this hook to manage global state and
-              pass data across components without prop drilling seemed abstract.
-              By utilizing useContext in this project, I learned that useContext
-              provides a way to access values (like a state or function) within
-              components, removing the need to pass props down manually. Using
-              the useContext hook, I could access and update shared data with
-              ease.
+              <b>Challenges</b> Understanding useContext in React posed a
+              challenge; figuring out how to use a hook to manage global state
+              and pass data across components without prop drilling seemed
+              abstract. By utilizing useContext in this project, I learned that
+              useContext provides a way to access values (like a state or
+              function) within components, removing the need to pass props down
+              manually. Using the useContext hook, I could access and update
+              shared data with ease.
             </p>
           </div>
 
